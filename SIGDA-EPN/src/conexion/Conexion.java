@@ -20,7 +20,7 @@ public class Conexion {
     Connection cnx;
     
     private static final String user = "root";
-    private static final String pass = "gracesita93";
+    private static final String pass = "22021996";
     private static final String nombreBDD = "dms_bdd";
 
     public Conexion() {
