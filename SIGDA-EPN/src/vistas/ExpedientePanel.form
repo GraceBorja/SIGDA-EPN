@@ -348,7 +348,7 @@
                                       <Group type="102" attributes="0">
                                           <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="txtURL" min="-2" pref="312" max="-2" attributes="0"/>
+                                          <Component id="txtUrlExp" min="-2" pref="312" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="1" attributes="0">
@@ -457,7 +457,7 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txtURL" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtUrlExp" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel31" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -674,7 +674,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTextArea" name="txtareaAsunto">
+                    <Component class="javax.swing.JTextArea" name="txtAsuntoExp">
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
@@ -757,6 +757,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Registrar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistrarActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnCancelar">
                   <Properties>
@@ -768,7 +771,7 @@
                     <Property name="text" type="java.lang.String" value="URL:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtURL">
+                <Component class="javax.swing.JTextField" name="txtUrlExp">
                 </Component>
               </SubComponents>
             </Container>

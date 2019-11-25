@@ -63,7 +63,7 @@ public class ExpedientePanel extends javax.swing.JPanel {
         txtCodigoExpediente = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        txtareaAsunto = new javax.swing.JTextArea();
+        txtAsuntoExp = new javax.swing.JTextArea();
         jLabel7 = new javax.swing.JLabel();
         fechaDesde = new com.toedter.calendar.JDateChooser();
         jLabel8 = new javax.swing.JLabel();
@@ -80,7 +80,7 @@ public class ExpedientePanel extends javax.swing.JPanel {
         btnRegistrar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         jLabel31 = new javax.swing.JLabel();
-        txtURL = new javax.swing.JTextField();
+        txtUrlExp = new javax.swing.JTextField();
         panelVerExpediente = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
@@ -331,9 +331,9 @@ public class ExpedientePanel extends javax.swing.JPanel {
 
         jLabel6.setText("Asunto:");
 
-        txtareaAsunto.setColumns(20);
-        txtareaAsunto.setRows(5);
-        jScrollPane1.setViewportView(txtareaAsunto);
+        txtAsuntoExp.setColumns(20);
+        txtAsuntoExp.setRows(5);
+        jScrollPane1.setViewportView(txtAsuntoExp);
 
         jLabel7.setText("Fecha Desde:");
 
@@ -356,6 +356,11 @@ public class ExpedientePanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(txtareaObservaciones);
 
         btnRegistrar.setText("Registrar");
+        btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistrarActionPerformed(evt);
+            }
+        });
 
         btnCancelar.setText("Cancelar");
 
@@ -378,7 +383,7 @@ public class ExpedientePanel extends javax.swing.JPanel {
                             .addGroup(jPanel10Layout.createSequentialGroup()
                                 .addComponent(jLabel31)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtURL, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtUrlExp, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel10Layout.createSequentialGroup()
                                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel7)
@@ -461,7 +466,7 @@ public class ExpedientePanel extends javax.swing.JPanel {
                     .addComponent(jLabel12))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtURL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtUrlExp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel31))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -959,6 +964,27 @@ public class ExpedientePanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtbuscarExpedientePor1ActionPerformed
 
+    private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
+        String codigoExp,numCajasExp, serieExp, subserieExp,anioExp,numeroExp, asuntoExp,fechaDesdeExp, fechaHastaExp;
+        String medAlmExp, OtroMedAlmExp, numFolioExp, obsExp, urlExp;
+        serieExp = txtSeccionDocumental.getText();
+        subserieExp = txtSubSeccionDocumental.getText();
+        anioExp = boxAnioProduccion.getToolTipText();
+        numeroExp = txtNumeroExpediente.getText();
+        codigoExp = txtCodigoExpediente.getText();
+        asuntoExp = txtAsuntoExp.getText();
+        //fechaDesdeExp = fechaDesdeExp // no se como obtener el dato, mejor no usar jcalendar!!!
+        //fechaHastaExp = fechaHastaExp
+        medAlmExp = boxMedioAlmacenamiento.getToolTipText();
+        OtroMedAlmExp = txtOtroAlmacenamiento.getText();
+        numFolioExp = txtNumFolios.getText();
+        obsExp = txtareaObservaciones.getText();
+        urlExp = txtUrlExp.getText();
+        
+        
+
+    }//GEN-LAST:event_btnRegistrarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane TabbedPaneMenuExp;
@@ -1039,6 +1065,7 @@ public class ExpedientePanel extends javax.swing.JPanel {
     private javax.swing.JPanel panelExpedientes;
     private javax.swing.JPanel panelRegistrarExp;
     private javax.swing.JPanel panelVerExpediente;
+    private javax.swing.JTextArea txtAsuntoExp;
     private javax.swing.JTextField txtCodigoExpediente;
     private javax.swing.JTextArea txtModAreaAsunto;
     private javax.swing.JTextArea txtModAreaObs;
@@ -1054,8 +1081,7 @@ public class ExpedientePanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtOtroAlmacenamiento;
     private javax.swing.JTextField txtSeccionDocumental;
     private javax.swing.JTextField txtSubSeccionDocumental;
-    private javax.swing.JTextField txtURL;
-    private javax.swing.JTextArea txtareaAsunto;
+    private javax.swing.JTextField txtUrlExp;
     private javax.swing.JTextArea txtareaObservaciones;
     private javax.swing.JTextField txtbuscarExpedientePor;
     private javax.swing.JTextField txtbuscarExpedientePor1;

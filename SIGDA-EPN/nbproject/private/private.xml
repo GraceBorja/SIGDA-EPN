@@ -7,15 +7,17 @@ HEAD
 
         
 635f921dc7b10e8e55bdb7c2ddc1871fc8d1e877
-    <group>
-            <file>file:/C:/Users/Kike/Documents/GitHub/SIGDA-EPN/SIGDA-EPN/src/vistas/PrincipalAdminV.java</file>
+    
+        <group>
             <file>file:/C:/Users/Kike/Documents/GitHub/SIGDA-EPN/SIGDA-EPN/src/vistas/TransferenciaPanel.java</file>
-            <file>file:/C:/Users/Kike/Documents/GitHub/SIGDA-EPN/SIGDA-EPN/src/modelo/Usuario.java</file>
-            <file>file:/C:/Users/Kike/Documents/GitHub/SIGDA-EPN/SIGDA-EPN/src/vistas/PrincipalUserV.java</file>
             <file>file:/C:/Users/Kike/Documents/GitHub/SIGDA-EPN/SIGDA-EPN/src/vistas/ExpedientePanel.java</file>
         </group>
         <group>
-            <file>file:/C:/Users/Kike/Documents/GitHub/SIGDA-EPN/SIGDA-EPN/src/vistas/TransferenciaPanel.java</file>
+            <file>file:/C:/Users/Kike/Documents/GitHub/SIGDA-EPN/SIGDA-EPN/src/vistas/AreaPanel.java</file>
+            <file>file:/C:/Users/Kike/Documents/GitHub/SIGDA-EPN/SIGDA-EPN/src/dao/ExpedienteDAO.java</file>
+            <file>file:/C:/Users/Kike/Documents/GitHub/SIGDA-EPN/SIGDA-EPN/src/control/ControlAll.java</file>
+            <file>file:/C:/Users/Kike/Documents/GitHub/SIGDA-EPN/SIGDA-EPN/src/dao/AreaDAO.java</file>
+            <file>file:/C:/Users/Kike/Documents/GitHub/SIGDA-EPN/SIGDA-EPN/src/dao/UsuarioDAO.java</file>
             <file>file:/C:/Users/Kike/Documents/GitHub/SIGDA-EPN/SIGDA-EPN/src/vistas/ExpedientePanel.java</file>
         </group>
     </open-files>
