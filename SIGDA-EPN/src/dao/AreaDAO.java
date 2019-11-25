@@ -135,13 +135,13 @@ public class AreaDAO {
             }
             
             PreparedStatement actualizar = conexion.getCnx().prepareStatement("UPDATE area SET "
-                    + "siglaArea='"+SiglaNueva+ "', "
+                    + "siglaArea='"+SiglaNueva+ "' "
                     + "WHERE idArea = " + idArea);
             actualizar.executeUpdate();
             JOptionPane.showMessageDialog(null, "Área ACTUALIZADA");
         } catch (SQLException ex) {
             Logger.getLogger(AreaDAO.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, "Cliente NO actualizado");
+            JOptionPane.showMessageDialog(null, "Área NO actualizada");
         }
     }
     
