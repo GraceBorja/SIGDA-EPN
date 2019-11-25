@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package vistas;
+
 import vistas.ExpedientePanel;
 
 /**
@@ -35,12 +36,11 @@ public class PrincipalUserV extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         btnModuloExpedientes = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnTransferencia = new javax.swing.JButton();
+        btnAyuda = new javax.swing.JButton();
         panelModulos = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(900, 650));
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
 
         jPanel1.setPreferredSize(new java.awt.Dimension(900, 650));
@@ -83,24 +83,31 @@ public class PrincipalUserV extends javax.swing.JFrame {
 
         jButton2.setText("jButton1");
 
-        jButton3.setText("jButton1");
+        btnTransferencia.setText("Transferencia");
+        btnTransferencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTransferenciaActionPerformed(evt);
+            }
+        });
 
-        jButton4.setText("jButton1");
+        btnAyuda.setText("Ayuda");
+        btnAyuda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAyudaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnModuloExpedientes)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton2)
-                            .addComponent(jButton3)
-                            .addComponent(jButton4))))
+                .addContainerGap(24, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(btnTransferencia, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnModuloExpedientes, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnAyuda, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(27, 27, 27))
         );
         jPanel4Layout.setVerticalGroup(
@@ -109,29 +116,18 @@ public class PrincipalUserV extends javax.swing.JFrame {
                 .addGap(86, 86, 86)
                 .addComponent(btnModuloExpedientes)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3)
+                .addComponent(btnTransferencia)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4)
-                .addContainerGap(399, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnAyuda)
+                .addContainerGap(394, Short.MAX_VALUE))
         );
 
         jPanel3.add(jPanel4);
 
         panelModulos.setPreferredSize(new java.awt.Dimension(750, 600));
-
-        javax.swing.GroupLayout panelModulosLayout = new javax.swing.GroupLayout(panelModulos);
-        panelModulos.setLayout(panelModulosLayout);
-        panelModulosLayout.setHorizontalGroup(
-            panelModulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 750, Short.MAX_VALUE)
-        );
-        panelModulosLayout.setVerticalGroup(
-            panelModulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-        );
-
+        panelModulos.setLayout(new java.awt.GridBagLayout());
         jPanel3.add(panelModulos);
 
         jPanel1.add(jPanel3);
@@ -142,13 +138,36 @@ public class PrincipalUserV extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnModuloExpedientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModuloExpedientesActionPerformed
-        // TODO add your handling code here:
+        panelModulos.removeAll();
         ExpedientePanel pnlExp = new ExpedientePanel();
-        pnlExp.setSize(750,600);
+        pnlExp.setSize(750, 600);
         panelModulos.add(pnlExp);
         panelModulos.revalidate();
         panelModulos.repaint();
+
+
     }//GEN-LAST:event_btnModuloExpedientesActionPerformed
+
+    private void btnTransferenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTransferenciaActionPerformed
+        panelModulos.removeAll();
+        TransferenciaPanel pnlTransf = new TransferenciaPanel();
+        pnlTransf.setSize(750, 600);
+        panelModulos.add(pnlTransf);
+        panelModulos.revalidate();
+        panelModulos.repaint();
+
+    }//GEN-LAST:event_btnTransferenciaActionPerformed
+
+    private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
+        panelModulos.removeAll();
+        AyudaPanel pnlAyuda = new AyudaPanel();
+        pnlAyuda.setSize(750,600);
+        panelModulos.add(pnlAyuda);
+        panelModulos.revalidate();
+        panelModulos.repaint();
+            
+        
+    }//GEN-LAST:event_btnAyudaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -186,10 +205,10 @@ public class PrincipalUserV extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAyuda;
     private javax.swing.JButton btnModuloExpedientes;
+    private javax.swing.JButton btnTransferencia;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
